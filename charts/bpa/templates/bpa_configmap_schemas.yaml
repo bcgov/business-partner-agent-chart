@@ -50,5 +50,9 @@ data:
           id: "Bcrxne1yVV9LkAnJ4uga4V:2:emissions-intensity:0.2"
           label: "Emissions Intensity"
           defaultAttributeName: "reporting_year"
+        tsm-safety-and-health-verification:
+          id: "DzipGjjse2bmtwxz1dmMob:2:tsm-safety-and-health-verification:0.1"
+          label: "TSM Safety and Health Verification"
+          defaultAttributeName: "reporting_year"
 {{- end -}}      
 {{- end -}}
