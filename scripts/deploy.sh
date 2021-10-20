@@ -137,6 +137,7 @@ helm_values_map["ux.config.theme.themes.light.icons"]=$UX_ICONS_COLOR
 ## image
 declare BPA_IMAGE_TAG_OVERRIDE=${IMAGE_TAG_OVERRIDE:-${IMAGE_TAG}}
 helm_values_map["bpa.image.tag"]=${BPA_IMAGE_TAG_OVERRIDE}
+helm_values_map["bpa.image.repository"]=$BPA_IMAGE_REPO
 
 ## environment
 ## loaded from .env config, then can be overriden in .param config
