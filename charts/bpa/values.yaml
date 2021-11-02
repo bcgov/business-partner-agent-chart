@@ -147,7 +147,13 @@ keycloak:
     vcauthn_pres_req_conf_id: bpa-wallet-access-dev
     
 schemas:
-  enabled: false
+  enabled: true
+  minesActPermit:
+    enabled: true
+  emissionsProfile:
+    enabled: true
+  tsm:
+    enabled: false
   config: {}
 #    bank-account:
 #      id: "M6Mbe3qx7vB4wpZF4sBRjt:2:bank_account:1.0"
@@ -219,7 +225,7 @@ acapy:
     repository: bcgovimages/aries-cloudagent
     pullPolicy: IfNotPresent
     # --  Overrides the image tag whose default is the chart appVersion.
-    tag: py36-1.16-1_0.7.2-rc0
+    tag: py36-1.16-1_0.7.1
 
   adminURLApiKey: 2f9729eef0be49608c1cffd49ee3cc4a
 
@@ -311,10 +317,10 @@ acapy:
 
   staticArgs:
     autoAcceptInvites: true
-    autoRespondMessages: false
     autoAcceptRequests: false
-    autoRespondCredentialProposal: true
-    autoRespondCredentialOffer: true
+    autoRespondMessages: false
+    autoRespondCredentialProposal: false
+    autoRespondCredentialOffer: false
     autoRespondCredentialRequest: true
     autoRespondPresentationProposal: true
     autoRespondPresentationRequest: false
@@ -324,7 +330,7 @@ acapy:
     autoProvision: true
     monitorPing: true
     publicInvites: true
-    logLevel: warning
+    logLevel: info
 
 postgresql:
   # --  PostgreSQL service configuration
