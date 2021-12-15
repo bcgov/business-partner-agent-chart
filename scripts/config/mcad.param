@@ -1,16 +1,16 @@
 # NO SPACES ALLOWED
-PROD_DEPLOYMENT_NAME="MCAD"
-TEST_DEPLOYMENT_NAME="MCAD"
-DEV_DEPLOYMENT_NAME="MCAD"
+#PROD_DEPLOYMENT_NAME="do not go to production"
+TEST_DEPLOYMENT_NAME="mcad"
+DEV_DEPLOYMENT_NAME="mcad-dev"
 
-PROD_DEPLOYMENT_TITLE="Mines Competitiveness and Authorizations Division"
+#PROD_DEPLOYMENT_TITLE="do not go to production"
 TEST_DEPLOYMENT_TITLE="Mines Competitiveness and Authorizations Division"
 DEV_DEPLOYMENT_TITLE="Mines Competitiveness and Authorizations Division"
 
 UX_PRESET=bcgov
 #BPA_I18N_LOCALE=en
 
-SCHEMAS_MINESACT_ENABLED=true
+SCHEMAS_MINESACT_ENABLED=false
 SCHEMAS_EMISSIONS_ENABLED=false
 SCHEMAS_TSM_ENABLED=false
 
