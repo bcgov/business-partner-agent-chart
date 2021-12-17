@@ -1,8 +1,8 @@
 # bpa
 
-The Business Partner Agent allows to manage and exchange master data between organizations.
+The BPA allows organizations to verify, hold, and issue verifiable credentials.
 
-![Version: 0.8.4](https://img.shields.io/badge/Version-0.8.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: sha-35c4130d](https://img.shields.io/badge/AppVersion-sha--35c4130d-informational?style=flat-square)
+![Version: 0.9.3](https://img.shields.io/badge/Version-0.9.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: sha-7e67aba](https://img.shields.io/badge/AppVersion-sha--7e67aba-informational?style=flat-square)
 
 The Business Partner Agent allows to manage and exchange master data between organizations.
 
@@ -182,7 +182,7 @@ Note: Deleting the PVC's will delete postgresql data as well. Please be cautious
 | acapy.fullnameOverride | string | `""` |  |
 | acapy.image.pullPolicy | string | `"IfNotPresent"` |  |
 | acapy.image.repository | string | `"bcgovimages/aries-cloudagent"` |  |
-| acapy.image.tag | string | `"py36-1.16-1_0.7.2-rc0"` | Overrides the image tag whose default is the chart appVersion. |
+| acapy.image.tag | string | `"py36-1.16-1_0.7.2"` | Overrides the image tag whose default is the chart appVersion. |
 | acapy.imagePullSecrets | list | `[]` |  |
 | acapy.ingress.annotations | object | `{}` |  |
 | acapy.ingress.enabled | bool | `true` |  |
@@ -213,7 +213,7 @@ Note: Deleting the PVC's will delete postgresql data as well. Please be cautious
 | acapy.staticArgs.autoProvision | bool | `true` |  |
 | acapy.staticArgs.autoRespondCredentialOffer | bool | `false` |  |
 | acapy.staticArgs.autoRespondCredentialProposal | bool | `false` |  |
-| acapy.staticArgs.autoRespondCredentialRequest | bool | `true` |  |
+| acapy.staticArgs.autoRespondCredentialRequest | bool | `false` |  |
 | acapy.staticArgs.autoRespondMessages | bool | `false` |  |
 | acapy.staticArgs.autoRespondPresentationProposal | bool | `true` |  |
 | acapy.staticArgs.autoRespondPresentationRequest | bool | `false` |  |
@@ -230,6 +230,9 @@ Note: Deleting the PVC's will delete postgresql data as well. Please be cautious
 | bpa.config.bootstrap.password | string | `"changeme"` | Default password |
 | bpa.config.bootstrap.username | string | `"admin"` | The name of the default admin user |
 | bpa.config.creddef.revocationRegistrySize | int | `3000` |  |
+| bpa.config.frontend | object | `{"closeSidebar":false,"hideSidebarButton":false}` | Frontend runtime variables which are injected into the frontend code on container startup (only if at least one runtime variable value has been set). These function e.g. as feature toggles for specific frontend changes. NOTE: The container startup time is impacted by using these. |
+| bpa.config.frontend.closeSidebar | bool | `false` | Setting this to true keeps the sidebar in the frontend closed when loading the page in a browser |
+| bpa.config.frontend.hideSidebarButton | bool | `false` | Setting this to true hides the sidebar burger button in the frontend. In combination with 'closeSidebar' the sidebar is completely gone. |
 | bpa.config.i18n.fallbackLocale | string | `"en"` |  |
 | bpa.config.i18n.locale | string | `"en"` |  |
 | bpa.config.imprint.enabled | bool | `false` |  |
@@ -328,7 +331,7 @@ docker run --rm --volume "$(pwd):/helm-docs" -u $(id -u) jnorwood/helm-docs:late
 | Name | Email | Url |
 | ---- | ------ | --- |
 | frank-bee | Frank.Bernhardt@bosch.com | https://github.com/frank-bee |
-| parc-jason | jsherman@parcsystems.ca | https://github.com/parc-jason |
+| usingtechnology | jsherman@parcsystems.ca | https://github.com/parc-jason |
 | Jsyro | jason.syrotuck@nttdata.com | https://github.com/Jsyro |
 
 ----------------------------------------------

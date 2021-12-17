@@ -65,6 +65,12 @@ bpa:
     i18n:
       locale: bcgov
       fallbackLocale: en
+    # -- Frontend runtime variables which are injected into the frontend code on container startup (only if at least one runtime variable value has been set). These function e.g. as feature toggles for specific frontend changes. NOTE: The container startup time is impacted by using these.
+    frontend:
+      # -- Setting this to true keeps the sidebar in the frontend closed when loading the page in a browser
+      closeSidebar: false
+      # -- Setting this to true hides the sidebar burger button in the frontend. In combination with 'closeSidebar' the sidebar is completely gone.
+      hideSidebarButton: false
     # --  log4j2 configuration file which must be in the classpath. Use log4j2.xml for non-json.
     logConfigurationFile: log4j2.xml
 
@@ -225,7 +231,7 @@ acapy:
     repository: bcgovimages/aries-cloudagent
     pullPolicy: IfNotPresent
     # --  Overrides the image tag whose default is the chart appVersion.
-    tag: py36-1.16-1_0.7.1
+    tag: py36-1.16-1_0.7.2
 
   adminURLApiKey: 2f9729eef0be49608c1cffd49ee3cc4a
 
@@ -321,7 +327,7 @@ acapy:
     autoRespondMessages: false
     autoRespondCredentialProposal: false
     autoRespondCredentialOffer: false
-    autoRespondCredentialRequest: true
+    autoRespondCredentialRequest: false
     autoRespondPresentationProposal: true
     autoRespondPresentationRequest: false
     autoStoreCredential: true
